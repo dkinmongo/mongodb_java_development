@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: develop
+---
+spring:
+  config:
+    activated:
+      on-profile: develop
+  data:
+    mongodb:
+      uri: "mongodb+srv://admin:Manager1@cluster0.gmta9.mongodb.net/test?retryWrites=true&w=majority"
+      database: test
+---
+logging:
+  level:
+    root: error
+    sun.rmi: error
+    org.mongodb: info
+    org.springframework: info
+    org.mongodb.SampleMongoDB: debug
+    com.zaxxer.hikari: off
+  pattern:
+    console: "%d{HH:mm:ss.SSS} - %msg%n"
+
